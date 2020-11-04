@@ -1,3 +1,3 @@
 # PokeTilt
 
-<img width="500" src="./presentation.gif">
+<img width="500" src="./Presentation.gif">
