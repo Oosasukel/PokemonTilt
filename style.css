@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url('./backgroundImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#container .cardContainer {
+  transform-style: preserve-3d;
+}
+
+#container .cardContainer:hover .card .pokeContainer .pokeImage {
+  animation: enterAnimation;
+  animation-duration: 1s;
+}
+
+@keyframes enterAnimation {
+  60% {
+    transform: translateZ(200px);
+  }
+  100% {
+    transform: translateZ(100px);
+  }
+}
+
+#container .cardContainer .card {
+  height: 400px;
+  width: 300px;
+  background: #fffb;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+  padding: 1rem;
+  margin: 3rem 1rem;
+}
+
+#container .cardContainer .card .pokeContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+#container .cardContainer .card .pokeContainer .pokeBackground {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+#container .cardContainer .card .pokeContainer .pokeImage {
+  position: absolute;
+  transform: translateZ(100px);
+}
+
+#container .cardContainer .card .infoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container .cardContainer .card .infoContainer .statsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#container .cardContainer .card .infoContainer h1 {
+  margin-bottom: 1rem;
+  font-weight: 800;
+  color: #222;
+  font-family: 'Nunito', sans-serif;
+  text-transform: capitalize;
+  transform: translateZ(150px);
+}
+
+#container .cardContainer .card .infoContainer .statsContainer p {
+  color: #555;
+  font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  transform: translateZ(90px);
+}
